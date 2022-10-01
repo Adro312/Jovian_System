@@ -1,0 +1,20 @@
+{% extends "layouts/layout.html" %}
+
+{% block titulo %} Inicio {% endblock %}
+
+{% block contenido %} 
+    <!-- Aqui va a ir todo el contenido -->
+    <div class="container">
+      <h1 id="text-box">
+        VISUALIZING THE JOVIAN SYSTEM LIKE NEVER BEFORE
+      </h1>
+      <br>
+      <a href="{% url 'galery' %}">
+        <button class="btn_our">
+          <ion-icon name="chevron-forward-outline" class="icono"></ion-icon>
+        </button>
+      </a>
+    </div>
+    
+    
+{% endblock %}

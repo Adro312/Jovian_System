@@ -1,0 +1,43 @@
+{% extends "layouts/layout.html" %}
+
+{% block titulo %} Galery {% endblock %}
+
+{% block contenido %}
+
+<nav class="navbar navbar-expand navbar-light bg-light justify-content-center">
+    <div class="nav navbar-nav">
+        <a class="nav-link active" href="{% url 'galery' %}">Galery</a>
+        <a class="nav-link active" href="{% url 'about-us' %}">About Us</a>
+        <a class="nav-link active font-weight-bold" href="{% url 'process' %}">Process</a>
+    </div>
+</nav>
+
+<div class="container">
+    <h1 id="text-box">Process</h1>
+
+    <div class="card">
+        <div class="card-body">
+            <form enctype="multipart/form-data" method="post">
+                {% csrf_token %}
+
+                {% for field in form %}
+                <div class="mb-3">
+                    <label for="" class="form-label">{{ field.label }}</label>
+
+                    <input 
+                        type="{{ field.field.widget.input_type }}" 
+                        class="form-control" 
+                        name="{{ field.name }}" id=""
+                        aria-describedby="helpId" 
+                        placeholder="{{ field.label }}"
+                        value="{{ field.value | default:'' }}" />
+
+                </div>
+                <div class="col-12 help-text">{{ field.errors }}</div>
+                {% endfor %}
+                <input name="" id="" class="btn btn-dark btn-lg btn-block"" type="submit" value="Process">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
