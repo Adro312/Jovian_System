@@ -3,7 +3,7 @@ let str = text.innerHTML;
 
 text.innerHTML = "";
 
-let speed = 20;
+let speed = 60;
 let i = 0;
 
 function typeWriter() {

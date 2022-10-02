@@ -4,21 +4,21 @@
 
 {% block contenido %}
 
-    <nav class="navbar navbar-expand navbar-light bg-light justify-content-center">
-        <div class="nav navbar-nav">
-            <a class="nav-link active font-weight-bold" href="{% url 'gallery' %}">Galery</a>
-            <a class="nav-link active" href="{% url 'about-us' %}">About Us</a>
-            <a class="nav-link active" href="{% url 'process' %}">Process</a>
-        </div>
-    </nav>
- 
-    <div class="container">
-        <h1 id="text-box">Gallery</h1>
+<nav>
+    <a class="button b1" href="{% url 'gallery' %}"></a>
+    <a class="button b2" href="{% url 'about-us' %}"></a>
+    <a class="button b3" href="{% url 'process' %}"></a>
+</nav>
+
+<div class="gallery">
+    <h1 class="heading" id="text-box">Gallery</h1>
+    <div class="grid">
         {% for img in images %}
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{ img.image.url }}" alt="Image">
-            </div>
+        <div class="" style="width: 12rem;">
+            <img class="card-img-top" src="{{ img.image.url }}" alt="Image">
             <a href="{{ img.image.url }}" download>Descargar</a>
+        </div>
         {% endfor %}
     </div>
+</div>
 {% endblock %}
