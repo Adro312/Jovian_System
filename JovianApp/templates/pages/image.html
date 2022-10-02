@@ -9,10 +9,5 @@
             <img class="card-img-top" src="{{ colored_Img.image.url }}" alt="Image">
             <a href="{{ colored_Img.image.url }}" download>Descargar</a>
         </div>
-        <select name="" id="">
-            {% for filter in filters %}
-            <option value="{{ filter }}">{{ filter }}</option>
-            {% endfor  %}
-        </select>
     </div>
 {% endblock %}

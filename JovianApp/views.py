@@ -44,14 +44,10 @@ def process(request):
         # get paths of last Id
         imgsGallery = Gallery.objects.get(id=imgsGalleryID.id)
 
-        # filters
-        filters = ['soft_light', 'dodge', 'lighten_only', 'addition', 'darken_only', 'multiply', 'hard_light', 'difference', 'grain_merge', 'overlay', 'normal']
-
         # reditect to edit image
         return render(request, "pages/image.html", {
             'colored_Img': imgsGallery,
             'imgID' : imgsGalleryID,
-            'filters': filters,
         })
 
     return render(request, "pages/process.html", {'form': form})
