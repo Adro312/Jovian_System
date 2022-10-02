@@ -1,16 +1,16 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import Galery, Images
+from .models import Gallery, Images
 from .forms import ImagesForm
-from .algoritm import giveColor
+from .deploy import giveColor
 
 # Create your views here.
 def home(request):
     return render(request, "pages/index.html")
 
-def galery(request):
-    images = Galery.objects.all()
-    return render(request, "pages/galery.html", {'images': images})
+def gallery(request):
+    images = Gallery.objects.all()
+    return render(request, "pages/gallery.html", {'images': images})
 
 def about_us(request):
     return render(request, "pages/about-us.html")
@@ -31,21 +31,28 @@ def process(request):
         imgs = Images.objects.get(id=imgsID.id)
 
         # give color
-        img = giveColor(imgs.redImage, imgs.greenImage, imgs.blueImage, imgsID.id)
+        img = giveColor(imgs.redImage, imgs.greenImage, imgs.blueImage, imgs.mapProjected, imgsID.id)
 
         # save in the db
-        Galery.objects.create(
+        Gallery.objects.create(
             image = img
         )
 
         # get last ID
-        imgsGalleryID = Galery.objects.latest('id')
+        imgsGalleryID = Gallery.objects.latest('id')
 
         # get paths of last Id
-        imgsGallery = Galery.objects.get(id=imgsGalleryID.id)
+        imgsGallery = Gallery.objects.get(id=imgsGalleryID.id)
+
+        # filters
+        filters = ['soft_light', 'dodge', 'lighten_only', 'addition', 'darken_only', 'multiply', 'hard_light', 'difference', 'grain_merge', 'overlay', 'normal']
 
         # reditect to edit image
-        return render(request, "pages/image.html", {'colored_Img': imgsGallery})
+        return render(request, "pages/image.html", {
+            'colored_Img': imgsGallery,
+            'imgID' : imgsGalleryID,
+            'filters': filters,
+        })
 
     return render(request, "pages/process.html", {'form': form})
 
