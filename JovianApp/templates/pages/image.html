@@ -1,0 +1,12 @@
+{% extends "layouts/layout.html" %}
+
+{% block titulo %} Image {% endblock %}
+
+{% block contenido %}
+    <div class="container">
+        <a href="{% url 'galery' %}"><button>Back</button></a>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ colored_Img.image.url }}" alt="Image">
+        </div>
+    </div>
+{% endblock %}
