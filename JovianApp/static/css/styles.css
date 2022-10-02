@@ -10,13 +10,13 @@
 }
 
 body {
-    background-color: white !important; 
+    background-color: rgb(238, 238, 238) !important; 
 
 }
 
 .img-bg
 {
-    background-image: url(../img/V01-Final.png);
+    background-image: url(../img/bro.png);
     background-size: cover;
 }
 
@@ -47,7 +47,7 @@ body {
     width: 88% !important;
     font-family: 'Mars' !important;
     font-size: 4.5em !important;
-    color: black !important;
+    color: rgb(61, 61, 61) !important;
     text-align: center;
 }
 
@@ -87,7 +87,7 @@ body {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-evenly !important;
-    background-color: white;
+    background-color: rgb(238, 238, 238);
     height: 15vh;
     align-items:center;
 
@@ -99,12 +99,12 @@ body {
     text-align: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
     text-decoration: none;
-    color:black;
-    background-color: black;
+    color:rgb(61, 61, 61);
+    background-color: rgb(61, 61, 61);
   }
   .button:hover
   {
-    color:black;
+    color:rgb(61, 61, 61);
     cursor: pointer;
   }
   
@@ -113,7 +113,7 @@ body {
     display: inline-block;
     margin-inline: 3px;
     margin-top: 3px;
-    background-color:white;
+    background-color:rgb(238, 238, 238);
     height: 29px;
     width: 114px;
   }
@@ -131,7 +131,14 @@ body {
 
   .grid
   {
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 60px;
+    height: 60vh;
+    overflow: auto;
+    padding: 10px;
   }
+
+  .grid::-webkit-scrollbar{width: 8px;}
+.grid::-webkit-scrollbar-thumb{background-color:  rgb(158, 158, 158);}
