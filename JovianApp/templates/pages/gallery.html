@@ -14,9 +14,9 @@
     <h1 class="heading" id="text-box">Gallery</h1>
     <div class="grid">
         {% for img in images %}
-        <div class="" style="width: 12rem;">
+        <div class="card" style="width: 12rem;">
             <img class="card-img-top" src="{{ img.image.url }}" alt="Image">
-            <a href="{{ img.image.url }}" download>Descargar</a>
+            <a href="{{ img.image.url }}" download><ion-icon name="cloud-download"></ion-icon>  Download</a>
         </div>
         {% endfor %}
     </div>
