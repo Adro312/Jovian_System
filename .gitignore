@@ -1,2 +1,4 @@
 images/
 db.sqlite3
+JovianApp/__pycache__/
+JovianSystem/__pycache__/
