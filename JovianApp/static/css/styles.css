@@ -10,7 +10,9 @@
 }
 
 body {
-  background-color: rgb(238, 238, 238) !important; 
+ /*  background-color: rgb(238, 238, 238) !important;  */
+  background-image: url(../img/A.png);
+  background-size: cover;
 
 }
 
@@ -33,7 +35,7 @@ img
   flex-direction: column;
 }
 .container {
-  height: 85vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,8 +54,9 @@ img
   width: 88% !important;
   font-family: 'Mars' !important;
   font-size: 4.5em !important;
-  color: rgb(61, 61, 61) !important;
+  color: white;
   text-align: center;
+  padding-top: 50px;
 }
 
 /* .btn_our {
@@ -79,6 +82,10 @@ img
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
   background-color: white;
   transition: .3s;
+
+  animation: fadeInAnimation1 ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .btn_our:hover
@@ -91,10 +98,27 @@ nav
 {
   display: flex !important;
   flex-direction: row !important;
-  justify-content: space-evenly !important;
-  background-color: rgb(238, 238, 238);
-  height: 15vh;
+  justify-content: center !important;
+  /* background-color: rgb(238, 238, 238); */
+  height: 10vh;
   align-items:center;
+
+  animation: fadeInAnimation1 ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  
+    background:hsl(0, 0%, 100% / 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(2rem);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    
+
+    /* box-shadow: 20px 20px 50px rgb(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5); */
 
 }
 
@@ -102,29 +126,39 @@ nav
    height: 35px;
   width: 120px;
   text-align: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
+  /* clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%); */
   text-decoration: none;
-  color:rgb(61, 61, 61);
-  background-color: rgb(61, 61, 61);
+  color:white;
+  /* background-color: white; */
+  transition: .3s;
+  font-size: 22px;
+  margin-inline: 30px;
 }
 .button:hover
 {
-  color:rgb(61, 61, 61);
+  color:white;
   cursor: pointer;
+  text-decoration: none;
+  transform: scale(1.5);
 }
 
+/*
 .button:after {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
   display: inline-block;
-  margin-inline: 3px;
-  margin-top: 3px;
-  background-color:rgb(238, 238, 238);
-  height: 29px;
-  width: 114px;
+  margin-inline: 2px;
+  margin-top: 2px;
+  background-color:rgb(50, 50, 50);
+  height: 31px;
+  width: 116px;
+}
+.button:hover::after
+{
+  background-color: white;
 }
 .b1:after{content:"Gallery"}
 .b2:after{content:"How to"}
-.b3:after{content:"Process"}
+.b3:after{content:"Process"} */
 
 .gallery
 {
@@ -147,3 +181,12 @@ nav
 
 .grid::-webkit-scrollbar{width: 8px;}
 .grid::-webkit-scrollbar-thumb{background-color:  rgb(158, 158, 158);}
+
+@keyframes fadeInAnimation1 {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}

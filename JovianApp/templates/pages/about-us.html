@@ -4,15 +4,13 @@
 
 {% block contenido %}
 
-    <nav class="navbar navbar-expand navbar-light bg-light justify-content-center">
-        <div class="nav navbar-nav">
-            <a class="nav-link active" href="{% url 'gallery' %}">Galery</a>
-            <a class="nav-link active font-weight-bold" href="{% url 'about-us' %}">About Us</a>
-            <a class="nav-link active" href="{% url 'process' %}">Process</a>
-        </div>
-    </nav>
+<nav>
+    <a class="button b1" href="{% url 'gallery' %}">Gallery</a>
+    <a class="button b2" href="{% url 'about-us' %}">How to</a>
+    <a class="button b3" href="{% url 'process' %}">Process</a>
+</nav>
  
     <div class="container">
-        <h1 id="text-box">About Us</h1>
+        <h1 class="heading" id="text-box">About Us</h1>
     </div>
 {% endblock %}
