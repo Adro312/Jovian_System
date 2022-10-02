@@ -160,12 +160,33 @@ nav
 .b2:after{content:"How to"}
 .b3:after{content:"Process"} */
 
+.back{
+
+  color:black;
+background-color: white;
+height: 50px;
+width:150px;
+font-size: 20px;
+text-align: center;
+border: none;
+text-decoration: none;
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
 .gallery
 {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  animation: fadeInAnimation1 ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 .grid
@@ -178,9 +199,40 @@ nav
   overflow: auto;
   padding: 10px;
 }
+.card
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+    background:hsl(0, 0%, 100% / 0.1);
+    backdrop-filter: blur(2rem);
+    border-radius: 8px;
+    transition: .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    
+}
 
-.grid::-webkit-scrollbar{width: 8px;}
-.grid::-webkit-scrollbar-thumb{background-color:  rgb(158, 158, 158);}
+.card:hover
+{
+  transform: scale(1.1);
+}
+.card img
+{
+  padding-top: 5px;
+  height: 100%;
+  width: 94%;
+  border-radius: 8px 0px 0px 0px;
+}
+.card a
+{
+  text-decoration: none;
+  color:white;
+  margin-top: 5px;
+}
+
+.grid::-webkit-scrollbar{width: 5px;}
+.grid::-webkit-scrollbar-thumb{background-color:  white;}
 
 @keyframes fadeInAnimation1 {
   0% {
@@ -189,4 +241,60 @@ nav
   100% {
       opacity: 1;
   }
+}
+
+.upload
+{
+  margin-top: 50px;
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  
+  border-radius: 8px;
+
+  background:hsl(0, 0%, 100% / 0.1);
+    backdrop-filter: blur(2rem);
+    border-radius: 8px;
+    transition: .3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+.upload form
+{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+}
+
+.upload input
+{
+  width: 100%;
+  border-radius: 25px;
+}
+.upload label
+{
+  width: 100%;
+  font-size: 20px;
+}
+
+.up
+{
+  height: 40px;
+  border: none;
+  background-color: white;
+  width: 80%!important;
+}
+.container-img
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
 }

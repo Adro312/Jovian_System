@@ -3,11 +3,13 @@
 {% block titulo %} Image {% endblock %}
 
 {% block contenido %}
-    <div class="container">
-        <a href="{% url 'gallery' %}"><button>Back</button></a>
+    <div class="container-img">
+        <a class="back" href="{% url 'gallery' %}">Back</a>
+        <br>
+        <br>
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="{{ colored_Img.image.url }}" alt="Image">
-            <a href="{{ colored_Img.image.url }}" download>Descargar</a>
+            <a href="{{ colored_Img.image.url }}" download ><ion-icon name="cloud-download"></ion-icon>Download</a>
         </div>
     </div>
 {% endblock %}
