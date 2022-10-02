@@ -1,24 +1,57 @@
-body {
-    background-color: black !important; 
+* {
+    box-sizing: border-box;
+    margin:0px;
+    padding:0px;
+  }
+
+@font-face{
+    font-family: 'Mars';
+    src: url(../assets/Mars.ttf);
 }
 
-.container {
-    height: 90vh;
+body {
+    background-color: white !important; 
+
+}
+
+.img-bg
+{
+    background-image: url(../img/V01-Final.png);
+    background-size: cover;
+}
+
+.lpage {
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+.container {
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
-h1 {
+.lheading {
     width: 88% !important;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Mars' !important;
     font-size: 4.5em !important;
     color: white !important;
     text-align: center;
 }
 
-.btn_our {
+.heading
+{
+    width: 88% !important;
+    font-family: 'Mars' !important;
+    font-size: 4.5em !important;
+    color: black !important;
+    text-align: center;
+}
+
+/* .btn_our {
     background-color: white;
     border: none;
     width: 90px;
@@ -28,7 +61,77 @@ h1 {
     justify-content: center !important;
     align-items: center !important;
 }
-
+ */
 .icono {
-    font-size: 80px !important;
+    font-size: 70px !important;
+    color:black;
 }
+
+.btn_our {
+    width: 180px;
+    height: 70px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
+    background-color: white;
+    transition: .3s;
+  }
+
+  .btn_our:hover
+  {
+    transform: translateX(50px);
+    cursor: pointer;
+  }
+
+ nav
+ {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-evenly !important;
+    background-color: white;
+    height: 15vh;
+    align-items:center;
+
+ }
+
+ .button {
+     height: 35px;
+    width: 120px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
+    text-decoration: none;
+    color:black;
+    background-color: black;
+  }
+  .button:hover
+  {
+    color:black;
+    cursor: pointer;
+  }
+  
+.button:after {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 15% 100%, 0% 55%);
+    display: inline-block;
+    margin-inline: 3px;
+    margin-top: 3px;
+    background-color:white;
+    height: 29px;
+    width: 114px;
+  }
+  .b1:after{content:"Gallery"}
+  .b2:after{content:"How to"}
+  .b3:after{content:"Process"}
+
+  .gallery
+  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid
+  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 60px;
+  }
