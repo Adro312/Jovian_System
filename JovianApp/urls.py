@@ -9,5 +9,6 @@ urlpatterns = [
     path('galery', views.galery, name='galery'),
     path('about-us', views.about_us, name='about-us'),
     path('process', views.process, name='process'),
+    path('image', views.image, name='image'),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
