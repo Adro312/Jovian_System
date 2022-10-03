@@ -10,9 +10,9 @@ from wand.image import Image
 
 def giveColor(redImgPath, greenImgPath, blueImgPath, mapProjected, lastId):
 
-    blue_path = redImgPath
+    blue_path = blueImgPath
     green_path = greenImgPath
-    red_path = blueImgPath
+    red_path = redImgPath 
     mapprojected = mapProjected
 
     blue = cv2.imread(f'{blue_path}')
