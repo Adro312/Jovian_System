@@ -287,7 +287,8 @@ display: flex;
   height: 40px;
   border: none;
   background-color: white;
-  width: 80%!important;
+  width: 80% !important;
+  cursor: pointer;
 }
 .container-img
 {
