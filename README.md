@@ -1,4 +1,4 @@
-# Jovian System
+# Visualizing the Jovian system like never before
 More information about the project that took place at [NASA INTERNATIONAL SPACE APPS CHALLENGE](https://2022.spaceappschallenge.org/challenges/2022-challenges/jovian-system/teams/capisaurios/project)
 
 Presentation of the project proposal, [Click here](https://docs.google.com/presentation/d/1TCdDBH_HELAP0OjYBq6xthTPTTy7Xlt8Du6p0GZnJtU/edit#slide=id.p)
