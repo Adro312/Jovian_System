@@ -1,4 +1,8 @@
 # Jovian System
+More information about the project that took place at [NASA INTERNATIONAL SPACE APPS CHALLENGE](https://2022.spaceappschallenge.org/challenges/2022-challenges/jovian-system/teams/capisaurios/project)
+
+Presentation of the project proposal, [Click here](https://docs.google.com/presentation/d/1TCdDBH_HELAP0OjYBq6xthTPTTy7Xlt8Du6p0GZnJtU/edit#slide=id.p)
+
 In order to run this web application from a local server, you need to have the following installed:
 * Python 
 * django 
